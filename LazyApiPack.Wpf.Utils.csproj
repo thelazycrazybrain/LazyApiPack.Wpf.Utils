@@ -7,4 +7,8 @@
 		<Nullable>enable</Nullable>
 	</PropertyGroup>
 
+	<ItemGroup>
+	  <PackageReference Include="LazyApiPack.Utils" Version="0.0.3.2" />
+	</ItemGroup>
+
 </Project>

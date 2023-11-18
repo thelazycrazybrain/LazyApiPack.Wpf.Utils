@@ -1,14 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Globalization;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Globalization;
 using System.Windows.Data;
 using System.Windows;
 
 namespace LazyApiPack.Wpf.Utils.Xaml
 {
+    /// <summary>
+    /// Provides functionality to bind to xaml objects in code.
+    /// </summary>
     public static class BindingHelper
     {
         public static BindingExpressionBase SetBinding(object sourceObject, string sourcePropertyName, DependencyObject targetObject,

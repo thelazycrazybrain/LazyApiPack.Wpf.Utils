@@ -15,7 +15,20 @@ namespace LazyApiPack.Wpf.Utils.Geometry
                 anchestor = parent;
             }
         }
-
+        public static TElement? GetParent<TElement>(this FrameworkElement fxe)
+        {
+            var anchestor = fxe;
+            while (true)
+            {
+                var parent = anchestor.Parent as FrameworkElement;
+                if (parent is TElement te)
+                {
+                    return te;
+                }
+                if (parent == null) return default;
+                anchestor = parent;
+            }
+        }
         public static LazyApiPack.Utils.Geometry.Size GetActualSize(this FrameworkElement fx)
         {
             var width = double.IsNaN(fx.Width) ? fx.ActualWidth : fx.Width;

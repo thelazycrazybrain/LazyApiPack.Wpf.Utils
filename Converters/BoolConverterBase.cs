@@ -24,7 +24,7 @@ namespace LazyApiPack.Wpf.Utils.Converters
                 var parameters = parameter.ToUpper()
                                           .Split(new char[] { ';', ',', '|' }, StringSplitOptions.RemoveEmptyEntries)
                                           .Select(p => p.Trim());
-                invertResult = parameters.Any(p => p == "!" ||  p == "INVERT");
+                invertResult = parameters.Any(p => p == "!" || p == "INVERT");
                 falseVisibility = parameters.Contains("HIDDEN") ? Visibility.Hidden : Visibility.Collapsed;
             }
 
